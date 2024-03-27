@@ -14,7 +14,10 @@ const TaskForm = ({ addTask }) => {
         onChange={(e) => setTask(e.target.value)}
       />
       <Button
-        onClick={() => addTask(task)}
+        onClick={() => {
+          addTask(task);
+          setTask("");
+        }}
         color="primary"
         style={{
           borderRadius: 12,
