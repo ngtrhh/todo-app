@@ -1,0 +1,63 @@
+@use "../abstract" as *;
+
+.task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  gap: 20px;
+
+  label {
+    display: flex;
+    align-items: center;
+    input {
+      width: 18px;
+      height: 18px;
+      accent-color: $primary-color;
+    }
+  }
+
+  span {
+    display: flex;
+    flex: 1;
+
+    &.done {
+      text-decoration: line-through;
+    }
+  }
+
+  .delete {
+    color: #bdbdbd;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+  }
+
+  .edit-input {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 16px;
+    align-items: center;
+
+    input {
+      border: 0;
+      outline: 0;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 500;
+      flex: 1;
+    }
+  }
+
+  .edit {
+    color: $primary-color;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+  }
+}

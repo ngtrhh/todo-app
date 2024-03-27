@@ -1,0 +1,42 @@
+@forward "./components/";
+@use "./abstract/" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.layout {
+  width: 50%;
+  margin: auto;
+}
+
+.main {
+  margin-top: 20px;
+  .search-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 0px;
+  gap: 28px;
+}

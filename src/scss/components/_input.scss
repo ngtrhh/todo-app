@@ -1,0 +1,111 @@
+@use "../abstract/" as *;
+
+.input-component {
+  & {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: Montserrat;
+    color: $input-color;
+    min-width: 200px;
+
+    &.fullWidth {
+      width: 100%;
+
+      .content {
+        input {
+          width: 100%;
+        }
+      }
+    }
+
+    &:focus-within {
+      color: $primary-color;
+    }
+
+    .content {
+      border: 1.5px solid #828282;
+      border-radius: 8px;
+      padding: 18px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: row;
+      gap: 12px;
+      color: #828282;
+
+      &.sm {
+        padding: 10px 12px;
+      }
+
+      input,
+      textarea {
+        border: 0;
+        outline: 0;
+        font-size: 14px;
+        font-weight: 400;
+
+        //make text
+        &:hover,
+        &:focus {
+          outline: none !important;
+          color: $input-color;
+        }
+      }
+
+      //make border
+      &:hover {
+        border: 1.5px solid $input-color !important;
+      }
+
+      //make border
+      &:focus-within {
+        border: 1.5px solid $primary-color !important;
+      }
+    }
+
+    .helper-text {
+      font-size: 10px;
+      font-weight: 400;
+      color: #828282;
+    }
+  }
+
+  &.error {
+    color: $danger-color;
+
+    .content {
+      border: 1.5px solid $danger-color;
+
+      //make border
+      &:hover {
+        border: 1.5px solid $input-color !important;
+      }
+
+      //make border
+      &:focus-within {
+        border: 1.5px solid $danger-color !important;
+      }
+    }
+
+    .helper-text {
+      color: $danger-color;
+    }
+  }
+
+  &.disabled {
+    .content {
+      background: $disabled-color;
+      border: 1.5px solid #e0e0e0;
+
+      //make border
+      &:hover {
+        border: 1.5px solid #e0e0e0 !important;
+      }
+
+      input {
+        background: $disabled-color;
+      }
+    }
+  }
+}
