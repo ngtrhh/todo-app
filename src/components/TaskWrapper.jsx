@@ -56,9 +56,9 @@ const TaskWrapper = ({ type }) => {
                 />
               );
             })
-          : tasks === "active"
+          : type === "active"
           ? tasks
-              .filter((uncompletedTask) => !uncompletedTask.completed)
+              .filter((item) => !item.completed)
               .map((item, index) => {
                 return (
                   <Task
